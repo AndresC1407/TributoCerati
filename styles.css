@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --space: 6rem;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+/* Global */
+
+.container {
+    max-width: 110rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 4.4rem;
+}
+
+h2 {
+    font-size: 3.6rem;
+}
+
+h3 {
+    font-size: 2.8rem;
+}
+
+@media (max-width: 460px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-size: 1.7rem;
+    }
+}
+
+/* Utility */
+
+.separator {
+    border-radius: 1rem;
+    border: 2px solid #e1e1e1;
+}
+
+
+.no-margin {
+    margin: 0 !important;
+}
+
+/* Header */
+.header {
+    text-align: center;
+}
+
+.header-texts h1 {
+    margin-top: var(--space);
+
+    font-weight: 900;
+}
+
+
+.header-texts p {
+    margin-top: calc(var(--space) / 2);
+    margin-bottom: calc(var(--space) / 3);
+    font-size: 1.8rem;
+}
+
+.header img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1.2rem;
+    border-radius: 1rem;
+    border: 3px solid #e1e1e1;
+}
+
+#img-caption {
+    font-size: 1.8rem;
+}
+
+/* General */
+
+.text {
+    padding: var(--space) 0;
+}
+
+@media (max-width: 768px) {
+    .text {
+        padding-bottom: 0;
+        padding-top: 1rem;
+    }
+}
+
+.text p {
+    line-height: 1.7;
+    text-align: justify;
+    margin-bottom: 2rem;
+}
+
+/* History */
+
+.history {
+    margin-top: var(--space);
+}
+
+
+.history-cerati {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: var(--space) 0;
+}
+
+@media (max-width: 768px) {
+    .history-cerati {
+        flex-direction: column;
+    }
+}
+
+.history-cerati img {
+    border-radius: 5rem;
+    object-fit: cover;
+    border: 2px solid #e1e1e1;
+}
+
+@media (max-width: 768px) {
+    .history-cerati img {
+        height: 40rem;
+    }
+}
+
+
+/* Soda Stereo */
+
+.soda-container {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: var(--space) 0;
+}
+
+@media (max-width: 768px) {
+    .soda-container {
+        flex-direction: column-reverse;
+    }
+
+}
+
+.soda-container img {
+    border-radius: 5rem;
+    border: 2px solid #e1e1e1;
+    height: 45rem;
+}
+
+@media (max-width: 768px) {
+    .soda-container img {
+        height: 35rem;
+    }
+}
+
+/* Albumes */
+
+.album h2 {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.album-grid {
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: repeat(3, 1fr);
+    padding: var(--space);
+    padding-bottom: calc(var(--space)*2);
+
+}
+
+
+@media (max-width: 1100px) {
+    .album-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .album-grid {
+        grid-template-columns: repeat(1, 1fr);
+        padding: var(--space) calc(var(--space) / 3) calc(var(--space)*2) calc(var(--space) / 3);
+    }
+}
+
+.album-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 14px -3px #000000;
+    border: 2px solid #e1e1e1;
+    padding-bottom: 3rem;
+    transition: transform .4s ease-out;
+
+}
+
+.album-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 14px 0px #000000;
+    background-color: #f0f0f0;
+}
+
+.album-card h3 {
+    text-align: center;
+    font-size: 2rem;
+    padding: 3rem;
+}
+
+.album-card p {
+    font-size: 1.7rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 0 3rem 3rem 3rem;
+    text-transform: uppercase;
+}
+
+.album-card span {
+    color: #C21010;
+    display: block;
+}
+
+.album-card img {
+    width: 100%;
+    max-height: 40rem;
+    object-fit: cover;
+    border-radius: 2rem 2rem 0 0;
+}
+
+/* Footer */
+
+.footer {
+    margin-top: 2rem;
+    padding: var(--space);
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-content p {
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    text-shadow: -2px -2px 2px #e1e1e1;
+}
